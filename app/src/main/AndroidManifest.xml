@@ -7,7 +7,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:theme="@android:style/Theme.NoTitleBar">
+        android:theme="@android:style/Theme.NoTitleBar"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="Wingwing(윙윙)"
+        android:roundIcon="@mipmap/ic_launcher_foreground">
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
@@ -21,5 +24,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

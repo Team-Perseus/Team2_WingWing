@@ -20,7 +20,6 @@ public class IntroActivity extends Activity {
             }
         },3000);
     }
-
     @Override
     protected void onPause(){
         super.onPause();

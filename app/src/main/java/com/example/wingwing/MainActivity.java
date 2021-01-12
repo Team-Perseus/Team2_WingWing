@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.UiThread;
@@ -16,8 +17,13 @@ import com.naver.maps.map.LocationTrackingMode;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.UiSettings;
 import com.naver.maps.map.overlay.Marker;
 import com.naver.maps.map.util.FusedLocationSource;
+import com.naver.maps.map.widget.CompassView;
+import com.naver.maps.map.widget.LocationButtonView;
+import com.naver.maps.map.widget.ScaleBarView;
+import com.naver.maps.map.widget.ZoomControlView;
 
 public class MainActivity extends FragmentActivity
         implements OnMapReadyCallback {
@@ -52,6 +58,20 @@ public class MainActivity extends FragmentActivity
         marker.setMap(naverMap);
         mNaverMap = naverMap;
         mNaverMap.setLocationSource(mLocationSource);
+        UiSettings uiSettings = mNaverMap.getUiSettings();
+        uiSettings.setCompassEnabled(true);
+        uiSettings.setScaleBarEnabled(true);
+        uiSettings.setZoomControlEnabled(true);
+        uiSettings.setLocationButtonEnabled(true);
+        CompassView compassView = findViewById(R.id.compass);
+        compassView.setMap(mNaverMap);
+        ScaleBarView scaleBarView = findViewById(R.id.scalebar);
+        scaleBarView.setMap(mNaverMap);
+        ZoomControlView zoomControlView = findViewById(R.id.zoom);
+        zoomControlView.setMap(mNaverMap);
+        LocationButtonView locationButtonView = findViewById(R.id.location);
+        locationButtonView.setMap(mNaverMap);
+
         ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_REQUEST_CODE);
     }
     @Override
