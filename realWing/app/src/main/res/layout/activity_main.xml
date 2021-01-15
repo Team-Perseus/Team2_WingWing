@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CF7272"
+    tools:context=".MainActivity" >
+
+<!--    메인버튼-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        app:backgroundTint="#3EFFFFFF"
+        app:srcCompat="@android:drawable/ic_media_ff" />
+
+<!--    현재위치-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="90dp"
+        android:src="@color/black"
+        android:visibility="invisible"
+        app:backgroundTint="#3Effffff"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"/>
+
+<!--    AED-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="165dp"
+        android:src="@color/cardview_light_background"
+        android:visibility="invisible"
+        app:backgroundTint="#3Effffff"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"/>
+
+<!--    응급실-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="240dp"
+        android:src="@color/cardview_light_background"
+        android:visibility="invisible"
+        app:backgroundTint="#3Effffff"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"/>
+
+<!--    응급처치-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="315dp"
+        android:src="@color/cardview_light_background"
+        android:visibility="invisible"
+        app:backgroundTint="#3Effffff"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"/>
+</FrameLayout>
