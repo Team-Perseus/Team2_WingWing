@@ -1,45 +1,55 @@
 package com.example.realwing;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.ScrollView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ScrollActivity extends AppCompatActivity {
-
-    private CprFragment cprFragment;
-    private AedFragment aedFragment;
-    private FragmentTransaction transaction;
-    private FragmentManager fragmentManager;
+    ScrollView scrollView;
+    ImageView imageView;
+    BitmapDrawable bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scroll);
+        setContentView(R.layout.scroll_activity);
 
-        fragmentManager = getSupportFragmentManager();
-        aedFragment = new AedFragment();
-        cprFragment = new CprFragment();
+        scrollView = findViewById(R.id.scrollView);
+        imageView = findViewById(R.id.imageView);
 
-        transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.frameLayout, aedFragment).commitAllowingStateLoss();
+        Resources res=getResources();
+        bitmap = (BitmapDrawable) res.getDrawable(R.drawable.imsi_aed);
+        imageView.setImageDrawable(bitmap);
+
+        scrollView.fullScroll(ScrollView.FOCUS_DOWN);
     }
 
-    public void onClick(View v){
-        transaction = fragmentManager.beginTransaction();
+    public void onClickBtnAed(View view) {
+        chanegeImage(0);
+    }
 
-        switch (v.getId()){
-            case R.id.btn_aed:
-                Toast.makeText(this,"aed", Toast.LENGTH_SHORT).show();
-                transaction.replace(R.id.frameLayout, aedFragment).commitAllowingStateLoss();
-                break;
-            case R.id.btn_cpr:
-                Toast.makeText(this,"cpr", Toast.LENGTH_SHORT).show();
-                transaction.replace(R.id.frameLayout, cprFragment).commitAllowingStateLoss();
-                break;
+    public void onClickBtnCpr(View view) {
+        chanegeImage(1);
+    }
+
+    private void chanegeImage(int imageIndex) {
+        if (imageIndex == 0) {
+            Resources res = getResources();
+            bitmap = (BitmapDrawable) res.getDrawable(R.drawable.imsi_aed);
+            imageView.setImageDrawable(bitmap);
+        } else if (imageIndex == 1) {
+            Resources res = getResources();
+            bitmap = (BitmapDrawable) res.getDrawable(R.drawable.imsi_cpr);
+            imageView.setImageDrawable(bitmap);
         }
+
     }
+
 }
