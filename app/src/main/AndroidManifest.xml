@@ -7,9 +7,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar"
         android:icon="@mipmap/ic_launcher_foreground"
         android:label="Wingwing(윙윙)"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_foreground">
 
         <meta-data
