@@ -11,8 +11,9 @@ import java.util.Scanner;
 
 public class LocationList {
     public static void main(String[] args){
-        String clientId = "TeRZ1y4kc10yr1z6ZPY1";
-        String clientSecret = "j8yqppJIG3";
+//        key 채워넣기
+        String clientId = "";
+        String clientSecret = "";
 
         String temp_json;
         String json = "";
