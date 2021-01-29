@@ -11,8 +11,8 @@ import java.util.Map;
 public class APIExamSearchLocal {
 
     public static void main(String[] args) {
-        String clientId = "TeRZ1y4kc10yr1z6ZPY1";
-        String clientSecret = "j8yqppJIG3";
+        String clientId = "";
+        String clientSecret = "";
 
         String text = null;
         try {
