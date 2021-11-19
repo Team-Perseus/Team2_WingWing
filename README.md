@@ -22,21 +22,31 @@
  - Pixel 3a API 30
  
 ## Build Enviroment
- - minSdkVerion
- - 
+ - minSdkVerion : 23
+ - targetSdkVersion : 30
+ - compileSdk Version : 30
  
 ## APIs
  * Naver Maps API
  * Naver Search API
 
 ## Other API (planned to be used) 
- * AED 조회 API (공공 데이터포털)
- * 응급의료기괸 조회 Service (공공 데이터포털)
+ * [AED 조회 API](https://www.data.go.kr/data/15000652/openapi.do)
+ * [응급의료기관 조회 Service](https://www.data.go.kr/data/15000563/openapi.do)
 
 ## Dependency 
 ```
+    'com.naver.maps:map-sdk:3.10.1'
+    'com.google.android.gms:play-services-location:17.0.0'
+    'com.squareup.retrofit2:retrofit:2.9.0'
+    'com.squareup.retrofit2:converter-gson:2.9.0'
+    'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    'com.squareup.okhttp3:okhttp:3.9.1'
+    'com.github.bumptech.glide:glide:3.7.0'
 ```
 
 ## Preference
 ```
+ Project Description Article 
+ https://www.hidoc.co.kr/healthstory/news/C0000611217
 ```
